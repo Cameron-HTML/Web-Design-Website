@@ -2,14 +2,20 @@
 <html>
 <head>
 	<title>FRC - FIRST Robotics Competition</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><br>
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<script src="core.js"></script>
+	<script src="js/core.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
 	
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 </head>
 <body onLoad="">
@@ -19,15 +25,27 @@
 			<img src="imgs/FRC-Logo.png" alt="FRC Logo">
 			
 			<ul>
-				<li class="one"><a href="#">Home</a></li>
-				<li class="two"><a href="">About</a></li>
-				<li class="active three"><a href="">Contact</a></li>
+				<li class="active one"><a href="#">Home</a></li>
+				<li class="two"><a href="about.html">About</a></li>
+				<li class="three"><a href="contact.html">Contact</a></li>
 				
 				<hr id="underline"/>
 			</ul>
 			
 		</div>
 	</header>
+	
+	<main>
+		
+		<div class="top-content">
+			<p class="top-bodytext" data-aos="fade-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla sapien id fringilla mollis. Sed venenatis tristique felis, id aliquam metus mattis in. Nulla facilisi. Aenean volutpat, enim nec blandit dictum, nisl elit cursus tellus, et volutpat massa tellus eget nunc. Nam massa nunc, mollis eget varius lacinia, vestibulum ut sapien. Aliquam vitae magna vestibulum, condimentum arcu vitae, consectetur arcu. </p>
+
+			<div class"owl-carousel">
+				<img class="top-bodyimage" src="imgs/skyfire.png" alt="Skyfire robot" data-aos="fade-left">
+			</div>
+		</div>
+		
+	</main>
 	
 	<!-- Init AOS Lib -->
 	<script>

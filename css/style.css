@@ -1,0 +1,62 @@
+body {
+	margin: 0;
+}
+
+.nav {
+	margin-top: 1vh;
+	display: flex;
+	justify-content: center;
+}
+
+.nav img {
+	height: 8vh;
+	padding-right: 50vh;
+	margin-left: -4vw;
+}
+
+.nav ul {
+	margin-left: -2vw;
+}
+
+.nav li {
+	display: inline;
+	padding-left: 1.25vw;
+}
+
+hr {
+	height: .50vh;
+	width: 25%;
+	margin: 0;
+	background: tomato;
+	border: none;
+	transition: .3s ease-in-out;
+	margin-left: 6.5%;
+}
+
+.nav a {
+	font-family: 'Lato';
+	font-size: 1.25vw;
+	font-weight: 700;
+	text-decoration: none;
+	color: black;
+}
+
+.top-content {
+	padding-top: 20vh;
+	display: flex;
+	justify-content: center;
+}
+
+.top-bodytext {
+	padding-top: 13vh;
+	font-family: 'Poppins';
+	font-size: 2vh;
+	width: 55vh;
+	height: auto;
+}
+
+.top-bodyimage {
+	padding-left: 8vh;
+	display: inline;
+	height: 60vh;
+}
