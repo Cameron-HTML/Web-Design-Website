@@ -7,12 +7,13 @@ $(document).ready(function(){
 	
 	function underline() {
 		if(element.hasClass('one')) {
-			underlineElement.css("margin-left", "6.5%");
+			underlineElement.css("margin-left", "1.35vw");
 		} else if(element.hasClass('two')) {
-			underlineElement.css("margin-left", "38%");
+			underlineElement.css("margin-left", "7.15vw");
+			underlineElement.css("width", "3.2vw");
 		} else if(element.hasClass('three')) {
-			underlineElement.css("margin-left", "70.7%");
-			underlineElement.css("width", "30%");
+			underlineElement.css("margin-left", "11.90vw");
+			underlineElement.css("width", "5.5vw");
 		}
 	}
 	
@@ -20,27 +21,88 @@ $(document).ready(function(){
 	
 	/* Move the underline depending on which you hover on */
 	$('.one').hover(function() {
-		underlineElement.css("margin-left", "6.5%");
-		underlineElement.css("width", "25%");
+		underlineElement.css("margin-left", "1.35vw");
+		underlineElement.css("width", "4.4vw");
 	}, function() {
 		underline();
 	});
 	
 	$('.two').hover(function() {
-		underlineElement.css("margin-left", "38%");
-		underlineElement.css("width", "25%");
+		underlineElement.css("margin-left", "7.15vw");
+		underlineElement.css("width", "3.2vw");
 	}, function() {
+		underlineElement.css("width", "4.4vw");
 		underline();
 	});
 	
 	$('.three').hover(function() {
-		underlineElement.css("margin-left", "70.7%");
-		underlineElement.css("width", "30%");
+		underlineElement.css("margin-left", "11.90vw");
+		underlineElement.css("width", "5.5vw");
 	}, function() {
+		underlineElement.css("width", "4.4vw");
 		underline();
-		underlineElement.css("width", "25%");
+	});
+
+
+	$(window).scroll(function() {
+		if($(window).scrollTop()) {
+			$('nav').addClass("nav-fixed");
+			$('#logo').attr('src', 'imgs/frc-logo-mini.png')
+			$('#logo').css("padding-right", "33.65vw");
+			$('#logo').css("height", "9.5vh");
+			$('.top-content').css("padding-top", "14vh");
+		} else {
+			$('nav').removeClass('nav-fixed');
+			$('#logo').attr('src', 'imgs/frc-logo-large.png')
+			$('#logo').css("padding-right", "30vw");
+			$('.top-content').css("padding-top", "0");
+			$('#logo').css("height", "10vh");
+		}
 	});
 	
-	$('.owl-carousel').owlCarousel();
-	
+	// Robot carousel
+	const robotCarousel = new Siema({
+		selector: '.robot-carousel',
+		duration: 500,
+		easing: 'ease-out',
+		perPage: 1,
+		startIndex: 0,
+		draggable: false,
+		multipleDrag: false,
+		threshold: 20,
+		loop: true,
+	});
+
+	setInterval(function() {
+	    robotCarousel.next();
+	}, 4000);
+
+	/* ------------------ 
+	var request = new XMLHttpRequest();
+
+	for(var i = 1; i < 2; i++) {
+		var url = 'https://www.thebluealliance.com/api/v3/teams/'+ i + '?X-TBA-Auth-Key=q1V3Lg2vSUolgRD8ENxnE1hcYoAUcK3LjyX52LvcUxOXgBcrMJik50YtUI1BX3nZ';
+		console.log(url);
+		request.open('GET', url, true);
+		request.onload = function () {
+
+		// Begin accessing JSON data here;
+		var data = JSON.parse(this.response);
+		if (request.status == 200) {
+			data.forEach(team => {
+				if(team.city == "Las Vegas") {
+					console.log(team);
+				} else {
+					console.log('ERROR NOT FOUND')
+				}
+			});
+		} else {
+			console.log('ERROR');
+			}
+		}
+
+		request.send();
+	}
+	*/
+
 });

@@ -1,62 +1,288 @@
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	margin: 0;
 }
 
-.nav {
-	margin-top: 1vh;
-	display: flex;
-	justify-content: center;
+a {
+	text-decoration: none;
 }
 
-.nav img {
-	height: 8vh;
-	padding-right: 50vh;
+.divider {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 1vh;
+	border-top-left-radius: .50vw;
+	border-bottom-right-radius: .50vw;
+}
+
+nav {
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	z-index: 10;
+	background-color: white;
+}
+
+nav.nav-fixed {
+	padding-top: 4.20vh;
+	padding-bottom: 2vh;
+	position: fixed;
+	top: 0;
+	width: 100%;
+
+	-webkit-box-shadow: 0px -3px 15px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px -3px 15px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px -3px 15px 0px rgba(0,0,0,0.75);
+	animation: smoothScroll .75s forwards;
+}
+
+nav img {
+	height: 10vh;
+	padding-right: 30vw;
 	margin-left: -4vw;
 }
 
-.nav ul {
+nav ul {
 	margin-left: -2vw;
 }
 
-.nav li {
-	display: inline;
-	padding-left: 1.25vw;
+nav li {
+	display: inline-block;
+	padding-left: 1.50vw;
 }
 
 hr {
 	height: .50vh;
-	width: 25%;
+	width: 4.4vw;
 	margin: 0;
-	background: tomato;
+	background: rgb(237,28,36);
 	border: none;
 	transition: .3s ease-in-out;
-	margin-left: 6.5%;
+	margin-left: 1.06vw;
 }
 
-.nav a {
+nav a {
 	font-family: 'Lato';
-	font-size: 1.25vw;
+	font-size: 1.5vw;
 	font-weight: 700;
 	text-decoration: none;
 	color: black;
 }
 
-.top-content {
-	padding-top: 20vh;
-	display: flex;
-	justify-content: center;
-}
-
-.top-bodytext {
-	padding-top: 13vh;
+.top-content p {
+	float: left;
+	padding-top: 25vh;
+	padding-right: 3.5vw;
+	margin-left: 11vw;
 	font-family: 'Poppins';
-	font-size: 2vh;
-	width: 55vh;
+	font-size: 1.32vw;
+	width: 36vw;
 	height: auto;
 }
 
-.top-bodyimage {
-	padding-left: 8vh;
+.robot-carousel {
+	float: right;
+	padding-top: 16vh;
+	padding-right: 6vw;
+	width: 40vw;
+}
+
+/*
+color: white;
+background-color: rgb(35,31,32);
+font-size: 2vw;
+padding: 1.25vh 1vw 1.25vh 1vw;
+font-family: 'Lato';
+overflow: hidden;
+*/
+
+button {
+	margin-top: 4vh;
+	margin-left: 23vw;
+	font-family: 'Lato', sans-serif;
+	font-size: 1.60vw;
+	line-height: 1;
+	color: white;
+
+	background: rgb(35,31,32);
+	padding: 1.35vh 1vw 1.35vh 1vw;
+	border: 0;
+	cursor: pointer;
+	overflow: hidden;
+
+	transform: translate(-50%, -50%);
+}
+
+button span {
+	display: block;
+	position: relative;
+	z-index: 10;
+}
+
+button:after, button:before {
+	padding: 18px 0 11px;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: calc(-100% - 30px);
+	height: calc(100% - 29px);
+	width: calc(100% + 20px);
+	color: #fff;
+	border-radius: 2px;
+	transform: skew(-25deg);
+}
+
+button:after {
+	background: #fff;
+	transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+	z-index: 0;
+	opacity: 0.8;
+}
+
+button:before {
+	background: rgb(237,28,36);
+	z-index: 5;
+	transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+button:hover:after {
+	left: calc(0% - 10px);
+	transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+button:hover:before {
+	left: calc(0% - 10px);
+	transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.div-one {
+	background-color: rgb(237,28,36);
+	margin-top: 24vh;
+	width: 8vw;
+}
+
+.mid-content p:nth-child(1) {
+	float: left;
+	padding-top: 18.5vh;
+	padding-right: 3.5vw;
+	margin-left: 11vw;
+	font-family: 'Poppins';
+	font-size: 1.32vw;
+	width: 36vw;
+	height: auto;
+}
+
+.div-two {
+	float: left;
+	margin-top: 1vh;
+	margin-left: -26.25vw;
+	width: 6vw;
+	background: linear-gradient(124deg, #ed1c24, #e8b71d, #1ddde8, #009cd7);
+	background-size: 1800% 1800%;
+	background-position: center;
+
+	-webkit-animation: rainbow 20s ease infinite;
+	-z-animation: rainbow 20s ease infinite;
+	-o-animation: rainbow 20s ease infinite;
+	animation: rainbow 20s ease infinite;
+}
+
+.mid-content p:last-of-type {
+	float: left;
+	margin-top: 5vh;
+	margin-right: 3.5vw;
+	margin-left: 11vw;
+	font-family: 'Poppins';
+	font-size: 1.32vw;
+	width: 36vw;
+	height: auto;
+}
+
+.mid-content p:last-of-type a{
+	color: rgb(0,156,215);
+	font-weight: bold;
+}
+
+.mid-content iframe {
+	padding-top: 14vh;
+	padding-left: 3vw;
+	padding-bottom: 15vh;
+	width: 36vw;
+	height: 40vh;
+}
+
+footer {
+	float: left;
+	padding-bottom: 2vw;
+	padding-top: 2.50vw;
+	background-color: white;
+
+	-webkit-box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.75);
+	width: 100%;
+}
+
+footer p {
+	float: left;
+	padding-left: 5vw;
+	font-family: 'Lato';
+	color: rgb(35,31,32);;
+	font-size: 1.15vw;
+}
+
+footer .copyright {
+	color: rgb(237,28,36);
+	font-weight: bold;
+}
+
+footer .name {
+	color: rgb(237,28,36);
+	font-weight: bold;
+}
+
+footer ul {
+	float: right;
+	padding-right: 5vw;
+	font-family: 'Lato';
+	color: rgb(35,31,32);;
+	font-size: 1.15vw;
+}
+
+footer li {
+	padding-left: .20vw;
 	display: inline;
-	height: 60vh;
+}
+
+footer ul a {
+	color: black;
+	font-family: 'Lato';
+	padding-left: .75vw;
+}
+
+@-webkit-keyframes rainbow {
+  0%{background-position: 0% 82%}
+  50%{background-position: 100% 19%}
+  100%{background-position: 0% 82%}
+}
+@-moz-keyframes rainbow {
+  0%{background-position: 0% 82%}
+  50%{background-position: 100% 19%}
+  100%{background-position: 0% 82%}
+}
+@-o-keyframes rainbow {
+  0%{background-position: 0% 82%}
+  50%{background-position: 100% 19%}
+  100%{background-position: 0% 82%}
+}
+@keyframes rainbow { 
+  0%{background-position: 0% 82%}
+  50%{background-position: 100% 19%}
+  100%{background-position: 0% 82%}
 }
