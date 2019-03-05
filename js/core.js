@@ -63,6 +63,8 @@ $(document).ready(function(){
 	var url = window.location.href;
 	var host = window.location.host;
 
+	console.log(url.indexOf('https://' + host + '/index.html'))
+
 	if(url.indexOf('https://' + host + '/index.html') != -1) {
 		console.log('true');
 	}
