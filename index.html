@@ -35,7 +35,7 @@
 		
 		<main>
 			
-			<div class="top-content">
+			<div class="index-top-content">
 				<p data-aos="fade-right" data-aos-duration="500">
 					The FIRST Robotics Competition (FRC) is an international high school robotics competition. Each year, teams of high school students, coaches, and mentors work during a six-week period to build game-playing robots that weigh up to 125 pounds. Robots complete tasks such as scoring balls into goals, flying discs into goals, inner tubes onto racks, hanging on bars, and balancing robots on balance beams.
 				</p>
@@ -61,7 +61,7 @@
 
 			<div class="div-one divider" data-aos="fade-down" data-aos-duration="500"></div>
 
-			<div class="mid-content">
+			<div class="index-mid-content">
 				<p data-aos="fade-right" data-aos-duration="500">
 					The game, along with the required set of tasks, changes annually. While teams are given a standard set of parts, they are also allowed a budget and are encouraged to buy or make specialized parts. The latest game release video can be found to the right.
 				</p>
@@ -72,7 +72,7 @@
 
 				<div class="div-two divider" data-aos="fade-right" data-aos-duration="500"></div>
 
-				<iframe src="https://www.youtube.com/embed/Mew6G_og-PI" frameborder="0" data-aos="fade-left"></iframe>
+				<iframe src="https://www.youtube.com/embed/Mew6G_og-PI" frameborder="0" data-aos="fade-left" data-aos-duration="500"></iframe>
 
 			</div>
 		</main>
@@ -119,6 +119,25 @@
 		<!-- Init AOS Lib -->
 		<script>
 		  AOS.init();
+		</script>
+
+		<script type="text/javascript">
+		// Robot carousel
+		const robotCarousel = new Siema({
+			selector: '.robot-carousel',
+			duration: 500,
+			easing: 'ease-out',
+			perPage: 1,
+			startIndex: 0,
+			draggable: false,
+			multipleDrag: false,
+			threshold: 20,
+			loop: true,
+		});
+
+		setInterval(function() {
+			robotCarousel.next();
+		}, 4000);
 		</script>
 
 	</body>
