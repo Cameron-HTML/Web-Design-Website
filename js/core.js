@@ -9,10 +9,10 @@ $(document).ready(function(){
 		if(element.hasClass('one')) {
 			underlineElement.css("margin-left", "1.35vw");
 		} else if(element.hasClass('two')) {
-			underlineElement.css("margin-left", "7.15vw");
+			underlineElement.css("margin-left", "7.3vw");
 			underlineElement.css("width", "3.2vw");
 		} else if(element.hasClass('three')) {
-			underlineElement.css("margin-left", "11.90vw");
+			underlineElement.css("margin-left", "12.18vw");
 			underlineElement.css("width", "5.5vw");
 		}
 	}
@@ -28,7 +28,7 @@ $(document).ready(function(){
 	});
 	
 	$('.two').hover(function() {
-		underlineElement.css("margin-left", "7.15vw");
+		underlineElement.css("margin-left", "7.14vw");
 		underlineElement.css("width", "3.2vw");
 	}, function() {
 		underlineElement.css("width", "4.4vw");
@@ -36,7 +36,7 @@ $(document).ready(function(){
 	});
 	
 	$('.three').hover(function() {
-		underlineElement.css("margin-left", "11.90vw");
+		underlineElement.css("margin-left", "11.80vw");
 		underlineElement.css("width", "5.5vw");
 	}, function() {
 		underlineElement.css("width", "4.4vw");
@@ -59,6 +59,13 @@ $(document).ready(function(){
 			$('#logo').css("height", "10vh");
 		}
 	});
+
+	var url = window.location.href;
+	var host = window.location.host;
+
+	if(url.indexOf('https://' + host + '/index.html') != -1) {
+		console.log('true');
+	}
 	
 	// Robot carousel
 	const robotCarousel = new Siema({
@@ -77,32 +84,32 @@ $(document).ready(function(){
 	    robotCarousel.next();
 	}, 4000);
 
-	/* ------------------ 
 	var request = new XMLHttpRequest();
 
-	for(var i = 1; i < 2; i++) {
-		var url = 'https://www.thebluealliance.com/api/v3/teams/'+ i + '?X-TBA-Auth-Key=q1V3Lg2vSUolgRD8ENxnE1hcYoAUcK3LjyX52LvcUxOXgBcrMJik50YtUI1BX3nZ';
-		console.log(url);
-		request.open('GET', url, true);
-		request.onload = function () {
+	function findTeam(city) {
+		for(var i = 1; i < 2; i++) {
+			var url = 'https://www.thebluealliance.com/api/v3/teams/'+ i + '?X-TBA-Auth-Key=q1V3Lg2vSUolgRD8ENxnE1hcYoAUcK3LjyX52LvcUxOXgBcrMJik50YtUI1BX3nZ';
+			console.log(url);
+			request.open('GET', url, true);
+			request.onload = function () {
 
-		// Begin accessing JSON data here;
-		var data = JSON.parse(this.response);
-		if (request.status == 200) {
-			data.forEach(team => {
-				if(team.city == "Las Vegas") {
-					console.log(team);
-				} else {
-					console.log('ERROR NOT FOUND')
+			// Begin accessing JSON data here;
+			var data = JSON.parse(this.response);
+			if (request.status == 200) {
+				data.forEach(team => {
+					if(team.city == city) {
+						console.log(team);
+					} else {
+						console.log('ERROR NOT FOUND')
+					}
+				});
+			} else {
+				console.log('ERROR');
 				}
-			});
-		} else {
-			console.log('ERROR');
 			}
-		}
 
-		request.send();
+			request.send();
+		}
 	}
-	*/
 
 });

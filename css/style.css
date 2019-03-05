@@ -27,6 +27,7 @@ nav {
 	overflow: hidden;
 	z-index: 10;
 	background-color: white;
+	width: 100%;
 }
 
 nav.nav-fixed {
@@ -43,12 +44,15 @@ nav.nav-fixed {
 }
 
 nav img {
+	display: inline-block;
 	height: 10vh;
+	width: auto;
 	padding-right: 30vw;
 	margin-left: -4vw;
 }
 
 nav ul {
+	display: inline-block;
 	margin-left: -2vw;
 }
 
@@ -229,7 +233,7 @@ footer {
 	width: 100%;
 }
 
-footer p {
+footer p:nth-child(1) {
 	float: left;
 	padding-left: 5vw;
 	font-family: 'Lato';
@@ -247,23 +251,74 @@ footer .name {
 	font-weight: bold;
 }
 
-footer ul {
+footer p:last-of-type {
 	float: right;
 	padding-right: 5vw;
 	font-family: 'Lato';
-	color: rgb(35,31,32);;
+	color: rgb(35,31,32);
 	font-size: 1.15vw;
 }
 
-footer li {
-	padding-left: .20vw;
-	display: inline;
+footer a:last-of-type {
+	font-family: 'Lato';
+	color: rgb(35,31,32);
+	font-size: 1.15vw;
 }
 
-footer ul a {
-	color: black;
-	font-family: 'Lato';
-	padding-left: .75vw;
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 17.7vh auto;
+  padding: 2vw;
+  background: #fff;
+  border-radius: 5px;
+  width: 36vw;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: 'Lato';
+  font-size: 2vw;
+}
+
+.popup .close {
+  position: absolute;
+  top: 2.30vh;
+  right: 2.24vw;
+  transition: all 200ms;
+  font-size: 2.50vw;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .close:hover {
+  color: rgb(237,28,36);
+}
+
+.popup .content {
+  overflow: auto;
+  font-size: 'Poppins';
+  font-size: 1.20vw;
+  width: 36vw;
 }
 
 @-webkit-keyframes rainbow {
