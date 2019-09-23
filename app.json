@@ -1,0 +1,6 @@
+{
+  "name": "FRC Website",
+  "description": "Simple website for portfolio",
+  "repository": "https://github.com/Cameron-HTML/Web-Design-Website-Project-One",
+  "keywords": ["node", "express", "heroku"]
+}

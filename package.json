@@ -1,0 +1,29 @@
+{
+  "name": "FRC-website",
+  "version": "0.3.0",
+  "description": "FRC website for portfolio",
+  "engines": {
+    "node": "10.x"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+  },
+  "devDependencies": {
+    "request": "^2.81.0",
+    "tape": "^4.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cameron-HTML/Web-Design-Website-Project-One"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ]
+}
