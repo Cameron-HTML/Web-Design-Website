@@ -47,14 +47,14 @@ $(document).ready(function(){
 	$(window).scroll(function() {
 		if($(window).scrollTop()) {
 			$('nav').addClass("nav-fixed");
-			$('#logo').attr('src', 'imgs/frc-logo-mini.png')
+			$('#logo').attr('src', 'images/frc-logo-mini.png')
 			$('#logo').css("padding-right", "33.65vw");
 			$('#logo').css("height", "9.5vh");
 			$('.index-top-content').css("padding-top", "14vh");
 			$('.join-top-content').css("padding-top", "14vh");
 		} else {
 			$('nav').removeClass('nav-fixed');
-			$('#logo').attr('src', 'imgs/frc-logo-large.png')
+			$('#logo').attr('src', 'images/frc-logo-large.png')
 			$('#logo').css("padding-right", "30vw");
 			$('.index-top-content').css("padding-top", "0");
 			$('.join-top-content').css("padding-top", "0");
